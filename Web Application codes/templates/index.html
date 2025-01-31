@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the webpage -->
+    <title>Plet</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/static/CSS/style.css" />
+    <!-- External scripts for jQuery, DevExpress, and SweetAlert2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/17.1.6/js/dx.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- External reset stylesheet and font from Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <!-- External script for common functionality -->
+    <script src="/static/JS/common.js"></script>
+  </head>
+  <body>
+    <!-- Header section with logo -->
+    <header>
+      <img class="logoImg" src="/static/Assets/logo.png" alt="logo" />
+    </header>
+
+    <!-- Container for gauge display -->
+    <div class="gauge-container">
+      <div class="gauge"></div>
+    </div>
+
+    <!-- Section for displaying plant type -->
+    <section>
+      <h1 class="plantType">Type of plant</h1>
+    </section>
+
+    <!-- Grid container for plant selection -->
+    <div class="grid-container">
+      <div class="items">
+        <img src="/static/Assets/succulent.jpeg" />
+        <p>Succulent</p>
+        <button id="buttonPlant_succulent" onclick="choosePlant('succulent')">Choose</button>
+    </div>
+    
+    <div class="items">
+        <img src="/static/Assets/flowers.jpg" />
+        <p>Indoor Flowers</p>
+        <button id="buttonPlant_flowers" onclick="choosePlant('flowers')">Choose</button>
+    </div>
+    
+    <div class="items">
+        <img src="/static/Assets/vegetables.jpg" />
+        <p>Indoor Vegetables</p>
+        <button id="buttonPlant_vege" onclick="choosePlant('vege')">Choose</button>
+    </div>
+    </div>
+
+    <!-- Section for user picture and upload -->
+    <section2>
+      <h1 class="pictureUser">Your Picture</h1>
+      <div id="image-container">
+  
+      </div>
+      <button id="upload-button" onclick=uploadImg()>Upload Image</button>
+      <p id="upload-message" class="hidden"> </p> 
+    </section2>
+
+    <!-- SVG element for defining linear gradient -->
+    <svg>
+      <defs>
+        <linearGradient id="gradientGauge">
+          <!-- Gradient stops for gauge colors -->
+          <stop class="color-red" offset="0%" />
+          <stop class="color-yellow" offset="17%" />
+          <stop class="color-green" offset="40%" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </body>
+</html>

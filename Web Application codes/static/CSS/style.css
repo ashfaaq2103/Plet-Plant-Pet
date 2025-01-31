@@ -1,0 +1,193 @@
+/* General styles for the entire page */
+body {
+  font-family: sans-serif; /* Set default font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #9be7ee7f;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  align-items: center;
+}
+
+/* Styles for the header section */
+header {
+  background-color: #e9fcff;
+  padding: 30px; /* Add padding */
+  height: 100px; /* Limit maximum height */
+  text-align: center;
+  display: flex;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: space-between; /* Distribute items evenly */
+  /* Animation for border color change */
+  animation: border-color-change 10s infinite alternate;
+}
+
+/* Keyframes for border color change animation */
+@keyframes border-color-change {
+  0% {
+    border-color: #aa5f2d;
+  }
+  50% {
+    border-color: #00bf63; /* You can change this to any color between red and green */
+  }
+  100% {
+    border-color: rgb(9, 119, 2);
+  }
+}
+
+/* Styles for logo image */
+.logoImg {
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Color classes for gradient stops */
+.color-red {
+  stop-color: #e23131;
+}
+
+.color-yellow {
+  stop-color: #fbe500;
+}
+
+.color-green {
+  stop-color: #25cd6b;
+}
+
+/* Styles for gauge container */
+.gauge-container {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px dotted #aa5f2d;
+}
+
+/* Styles for gauge */
+.gauge {
+  height: 220px;
+  width: 300px;
+}
+.gauge .dxg-range.dxg-background-range {
+  fill: url(#gradientGauge);
+}
+.gauge .dxg-line {
+  transform: scaleX(1.04) scaleY(1.03) translate(-4px, -4px);
+}
+.gauge .dxg-line path:first-child,
+.gauge .dxg-line path:last-child {
+  display: none;
+}
+/* Additional styles for gauge */
+/* Omitted for brevity */
+
+/* Styles for plant type */
+.plantType {
+  text-align: center; /* Center-align the text */
+  font-size: 32px; /* Increase the font size */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 540;
+  margin-top: 50px; /* Add margin to push it down */
+  color: #4b2a14;
+}
+
+/* Styles for grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 35px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  justify-content: space-around;
+}
+
+/* Styles for items in the grid */
+.grid-container .items {
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  min-width: 400px;
+  max-height: 500px;
+  background-color: #25cd6b62;
+}
+
+/* Hover styles for grid items */
+.grid-container .items:hover {
+  background-color: #1b8949b8;
+  color: white;
+  box-shadow: 10px 10px 5px rgba(78, 76, 76, 0.241); /*Sets shadow around box*/
+}
+
+/* Styles for images */
+img {
+  border-radius: 15px;
+  max-height: 200px;
+}
+
+/* Styles for paragraph inside grid container */
+.grid-container p {
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Styles for buttons inside grid container */
+.grid-container button {
+  border-radius: 5px;
+  border: gray;
+  box-shadow: 10px 10px 5px rgba(78, 76, 76, 0.241); /*Sets shadow around box*/
+  font-size: 20px;
+  background-color: #57a0af;
+  width: 40%;
+  height: 10%;
+  transition: 0.5 ease-in-out;
+}
+
+/* Hover styles for buttons */
+.grid-container button:hover {
+  background-color: white;
+  color: #4b2a14;
+}
+
+/* Styles for user picture section */
+.pictureUser {
+  text-align: center; /* Center-align the text */
+  font-size: 32px; /* Increase the font size */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 540;
+  margin-top: 50px; /* Add margin to push it down */
+  color: #4b2a14;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}
+
+/* Styles for image container */
+#image-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Styles for uploaded image */
+#uploaded-image {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/* Styles for upload button */
+#upload-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
